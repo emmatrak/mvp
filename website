@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Tour Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #0047ab;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #003366;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+        .filter-section {
+            background-color: #e9efff;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .filter-section label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        .filter-section input,
+ .filter-section select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .college-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .college-card {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .college-card h3 {
+            color: #0047ab;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>College Tour Finder</h1>
+        <p>Your one-stop solution for finding and booking college tours!</p>
+    </header>
+
+    <nav>
+        <a href="#filter">Find Colleges</a>
+        <a href="#tours">Book a Tour</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <!-- Filter Section -->
+        <section id="filter" class="filter-section">
+            <h2>Find Colleges</h2>
+            <form id="filterForm">
+                <label for="location">Location:</label>
+                <select id="location" name="location">
+                    <option value="">Select a location</option>
+                    <option value="northeast">Northeast</option>
+ <option value="midwest">Midwest</option>
+                    <option value="south">South</option>
+                    <option value="west">West</option>
+                </select>
+
+                <label for="major">Preferred Major:</label>
+                <select id="major" name="major">
+                    <option value="">Select a major</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="business">Business</option>
+                    <option value="arts">Arts</option>
+                    <option value="science">Science</option>
+                </select>
+
+                <label for="size">Campus Size:</label>
+                <select id="size" name="size">
+                    <option value="">Select a size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <!-- College List -->
+        <section id="tours">
+            <h2>Recommended Colleges</h2>
+            <div class="college-list">
+                <div class="college-card">
+                    <h3>University A</h3>
+                    <p>Location: Northeast</p>
+                    <p>Major: Engineering</p>
+                    <a href="#">View Tour</a>
+                </div>
+                <div class="college-card">
+                    <h3>University B</h3>
+                    <p>Location: South</p>
+                    <p>Major: Business</p>
+                    <a href="#">View Tour</a>
+                </div>
+                <!-- Add more college cards as needed -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>College Tour Finder &copy; 2024 | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+ }
+    header {
+        background-color: #0047ab;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+    }
+</style>
+<script>
+    function showAlert() {
+        alert('Welcome to College Tour Finder!');
+    }
+</script>
+<button onclick="showAlert()">Click Me</button>
